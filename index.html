@@ -21,25 +21,7 @@
 
     <!-- Java -->
     <script>
-        function loadPage(url) {
-            var currentPage = document.querySelector('.page-content');
-            currentPage.classList.add('slide-out');
-
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState === 4 && this.status === 200) {
-                var newPageContent = this.responseText;
-
-                setTimeout(function() {
-                    currentPage.innerHTML = newPageContent;
-                    currentPage.classList.remove('slide-out');
-                    currentPage.classList.add('slide-in');
-                }, 10000); // Change the delay as needed (in milliseconds)
-                }
-            };
-            xhttp.open('GET', url, true);
-            xhttp.send();
-         }
+        
     </script>
 </head>
 
@@ -163,29 +145,10 @@
         opacity: 1;
         right: 0;
     }
-
-    .page-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.5s ease;
-        transform: translateX(0);
-    }
-
-    .page-content.slide-out {
-        transform: translateX(-100%);
-    }
-
-    .page-content.slide-out {
-        transform: translateX(-100%);
-    }   
 </style>
 
 <!-- HTML + Bootstrap -->
 <body>
-<div class="page-content">
     <div class="container mt-5">
         <div class="row">
             <div class="col-sm-6">
@@ -242,7 +205,5 @@
             </div>
         </div>
     </div>
-</div>
-
 </body>
 </html>
