@@ -18,6 +18,11 @@
 
     <!-- LinkedIn Logo -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+    <!-- Java -->
+    <script>
+        
+    </script>
 </head>
 
 <!-- CSS -->
@@ -55,28 +60,7 @@
         display: block;
     }
 
-    a.h1:link, :visited{
-        text-decoration: none;
-        color: white;
-    }
-
-    a.h1:hover, :active{
-        color: white;
-        transition-duration: .2s;
-        text-shadow: 3px 3px rgba(0, 0, 0, 0.365);
-    }
-    
-    a.h2:link, :visited{
-        text-decoration: none;
-        color: white;
-    }
-
-    a.h2:hover, :active{
-        color: white;
-        transition-duration: .2s;
-        text-shadow: 3px 3px rgba(0, 0, 0, 0.365);
-    }
-
+/* button for Sam Queralt */
     .button {
         background-color: transparent;
         border: none;
@@ -84,7 +68,7 @@
         text-align: center;
         font-size: 25px;
         padding: 5%;
-        width: 100%;
+        width: 70%;
         transition: all 0.5s;
         cursor: pointer;
         margin-left: auto;
@@ -105,7 +89,7 @@
         position: absolute;
         opacity: 0;
         top: 0;
-        right: -20px;
+        right: -15px;
         transition: 0.5s;
     }
 
@@ -114,6 +98,48 @@
     }
 
     .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+/* button for Page Links */
+    .page_link_button {
+        background-color: transparent;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 25px;
+        padding: 5%;
+        width: 70%;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .page_link_button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .page_link_button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -10px;
+        transition: 0.5s;
+    }
+
+    .page_link_button:hover span {
+        padding-right: 30px;
+    }
+
+    .page_link_button:hover span:after {
         opacity: 1;
         right: 0;
     }
@@ -143,10 +169,37 @@
 
             </div>
             <div class="col-sm-6">
-                <h2><a href="" class="h2">Resume</a></h2>
-                <h2><a href="" class="h2">Experience</a></h2>
-                <h2><a href="" class="h2">Projects</a></h2>
-                <h2><a href="" class="h2">Contact</a></h2>
+                <button
+                    class="page_link_button"
+                    href="resume.html">
+                        <span>
+                            Resume
+                        </span>
+                </button>
+
+                <button
+                    class="page_link_button"
+                    href="experience.html">
+                        <span>
+                            Experience
+                        </span>
+                </button>
+
+                <button
+                    class="page_link_button"
+                    href="projects.html">
+                        <span>
+                            Projects
+                        </span>
+                </button>
+
+                <button
+                    class="page_link_button"
+                    href="contact.html">
+                        <span>
+                            Contact
+                        </span>
+                </button>
             </div>
         </div>
     </div>
