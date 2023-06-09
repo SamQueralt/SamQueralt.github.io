@@ -21,25 +21,16 @@
 
     <!-- Java -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var buttons = document.querySelectorAll('.page_link_button');
+        function navigateTo(url) {
+            // Slide out the current page
+            var currentPage = document.querySelector('.page-content');
+            currentPage.classList.add('slide-out');
 
-            Array.prototype.forEach.call(buttons, function(button) {
-                button.addEventListener('click', function(event) {
-                event.preventDefault();
-                var targetPage = this.getAttribute('data-href');
-
-                // Slide out the current page
-                var currentPage = document.querySelector('.page-content');
-                currentPage.classList.add('slide-out');
-
-                // Wait for the transition to complete and then navigate to the target page
-                setTimeout(function() {
-                    window.location.href = targetPage;
-                }, 500); // Change the delay as needed (in milliseconds)
-                });
-            });
-        });
+            // Wait for the transition to complete and then navigate to the target page
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500); // Change the delay as needed (in milliseconds)
+            }
     </script>
 </head>
 
@@ -137,8 +128,6 @@
         margin-right: auto;
         display: block;
         font-family: 'IBM Plex Mono', monospace;
-        position: relative;
-        overflow: hidden;
     }
 
     .page_link_button span {
@@ -166,24 +155,18 @@
         right: 0;
     }
 
-    .page_link_button.slide-in span {
-        transform: translateX(100%);
-    }
-
-    .page_link_button.slide-in::before {
-        content: '';
+    .page-content {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background-color: #f5f5f5; /* Adjust the background color as needed */
-        transform: translateX(100%);
-        transition: transform 0.5s;
+        transition: transform 0.5s ease;
+        transform: translateX(0);
     }
 
-        .page_link_button.slide-in:hover::before {
-        transform: translateX(0);
+    .page-content.slide-out {
+        transform: translateX(-100%);
     }
 </style>
 
@@ -211,25 +194,25 @@
 
             </div>
             <div class="col-sm-6">
-                <a href="resume.html">
-                    <button class="page_link_button">
-                        <span>
+                <button 
+                    class="page_link_button"
+                    onclick="window.location.href='/resume.html'">
+                    <span>
                         Resume
-                        </span>
-                    </button>
-                </a>
+                    </span>
+                </button>
 
                 <button
                     class="page_link_button"
-                    href="experience.html">
+                    onclick="window.location.href='/experience.html'">
                         <span>
-                            Experience -- test
+                            Experience
                         </span>
                 </button>
 
                 <button
                     class="page_link_button"
-                    href="projects.html">
+                    onclick="window.location.href='/projects.html'">
                         <span>
                             Projects
                         </span>
@@ -237,7 +220,7 @@
 
                 <button
                     class="page_link_button"
-                    href="contact.html">
+                    onclick="window.location.href='/contact.html'">
                         <span>
                             Contact
                         </span>
