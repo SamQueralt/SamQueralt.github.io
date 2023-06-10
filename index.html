@@ -17,266 +17,17 @@
     <!-- Monospace font -->
     <link href="http://fonts.googleapis.com/css2?family=Dokdo&family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
 
-    <!-- LinkedIn Logo -->
+    <!-- Font Awesome Logos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Java -->
     <script>
         
     </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css_home.css">
 </head>
-
-<!-- CSS -->
-<style>
-    body{
-        background: linear-gradient(to bottom right, #000089, #9933ff) no-repeat center center fixed;
-        background-size: cover;
-    }
-
-    p{
-        color: white;
-        font-size: 20px;
-    }
-
-    .profile{
-        width: 80%;
-        border-radius: 4%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
-/* old header style
-    h1 {
-        color: white;
-        font-size: 50%;
-        padding: 5%;
-        text-align: center;
-    }
-
-    h2 {
-        color: white;
-        font-size: 30px;
-        padding: 5%;
-        text-align: center;
-        font-family: 'IBM Plex Mono', monospace;
-    }
-*/
-
-/* button for Sam Queralt */
-    .button {
-        background-color: transparent;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 25px;
-        padding: 5%;
-        width: 70%;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
-    .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .button span:after {
-        font-family: "Font Awesome 5 Brands";
-        content: '\f08c';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -15px;
-        transition: 0.5s;
-    }
-
-    .button:hover span {
-        padding-right: 30px;
-    }
-
-    .button:hover span:after {
-        opacity: 1;
-        right: 0;
-    }
-
-/* button for Resume */
-    .page_link_button_resume {
-        background-color: transparent;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 25px;
-        padding: 5%;
-        width: 70%;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        font-family: 'IBM Plex Mono', monospace;
-    }
-
-    .page_link_button_resume span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .page_link_button_resume span:after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f15b";
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -10px;
-        transition: 0.5s;
-    }
-
-    .page_link_button_resume:hover span {
-        padding-right: 30px;
-    }
-
-    .page_link_button_resume:hover span:after {
-        opacity: 1;
-        right: 1;
-    }
-
-/* button for Exp */
-    .page_link_button_exp {
-        background-color: transparent;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 25px;
-        padding: 5%;
-        width: 70%;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        font-family: 'IBM Plex Mono', monospace;
-    }
-
-    .page_link_button_exp span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .page_link_button_exp span:after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f14e";
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -10px;
-        transition: 0.5s;
-    }
-
-    .page_link_button_exp:hover span {
-        padding-right: 30px;
-    }
-
-    .page_link_button_exp:hover span:after {
-        opacity: 1;
-        right: 1;
-    }
-
-/* button for Proj */
-.page_link_button_proj {
-        background-color: transparent;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 25px;
-        padding: 5%;
-        width: 70%;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        font-family: 'IBM Plex Mono', monospace;
-    }
-
-    .page_link_button_proj span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .page_link_button_proj span:after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f07b";
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -10px;
-        transition: 0.5s;
-    }
-
-    .page_link_button_proj:hover span {
-        padding-right: 30px;
-    }
-
-    .page_link_button_proj:hover span:after {
-        opacity: 1;
-        right: 1;
-    }
-
-/* button for Contact */
-.page_link_button_contact {
-        background-color: transparent;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 25px;
-        padding: 5%;
-        width: 70%;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        font-family: 'IBM Plex Mono', monospace;
-    }
-
-    .page_link_button_contact span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .page_link_button_contact span:after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f2bb";
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -10px;
-        transition: 0.5s;
-    }
-
-    .page_link_button_contact:hover span {
-        padding-right: 30px;
-    }
-
-    .page_link_button_contact:hover span:after {
-        opacity: 1;
-        right: 1;
-    }
-</style>
 
 <!-- HTML + Bootstrap -->
 <body>
@@ -291,14 +42,15 @@
                             class="profile"
                             alt="Sam Queralt">
                 </a>
-
-                <button 
-                    class="button" 
-                    onclick="window.location.href='https:https://www.linkedin.com/in/samuel-queralt/';">
-                        <span>
-                            Sam Queralt
-                        </span>
-                </button>
+                
+                <form action="https://www.linkedin.com/in/samuel-queralt/">
+                    <button 
+                        class="button">
+                            <span>
+                                Sam Queralt
+                            </span>
+                    </button>
+                </form>
 
             </div>
             <div class="col-sm-6">

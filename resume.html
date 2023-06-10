@@ -16,93 +16,17 @@
     <!-- Monospace font -->
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
 
-    <!-- LinkedIn Logo -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
 
     <!-- Java -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        var links = document.querySelectorAll('.page-link');
-
-        Array.prototype.forEach.call(links, function(link) {
-            link.addEventListener('click', function(event) {
-            event.preventDefault();
-            var targetPage = this.getAttribute('href');
-
-            // Slide out the current page
-            var currentPage = document.querySelector('.page-content');
-            currentPage.classList.add('slide-out');
-
-            // Create the new page element and append it to the body
-            var newPage = document.createElement('div');
-            newPage.classList.add('page-content', 'slide-in');
-            document.body.appendChild(newPage);
-
-            // Wait for the transition to complete and then navigate to the target page
-            setTimeout(function() {
-                window.location.href = targetPage;
-            }, 500); // Change the delay as needed (in milliseconds)
-            });
-        });
-        });
-
+    
     </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css_home.css">
 </head>
-
-<style>
-
-    body{
-        background: linear-gradient(to bottom right, #000089, #9933ff) no-repeat center center fixed;
-        background-size: cover;
-    }
-
-    p {
-        color: white;
-        font-size: 20px;
-        padding: 20%;
-    }
-
-    .page_link_button {
-        background-color: transparent;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 25px;
-        padding: 5%;
-        width: 70%;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        font-family: 'IBM Plex Mono', monospace;
-    }
-
-    .page_link_button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .page_link_button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -10px;
-        transition: 0.5s;
-    }
-
-    .page_link_button:hover span {
-        padding-right: 30px;
-    }
-
-    .page_link_button:hover span:after {
-        opacity: 1;
-        right: 0;
-    }
-</style>
 
 <body>
     <div class="container mt-5">
@@ -115,7 +39,7 @@
 
             <div class="col-sm-4">
                 <button 
-                    class="page_link_button"
+                    class="page_link_button_home"
                     onclick="window.location.href='/index.html'">
                     <span>
                         Home
@@ -123,7 +47,7 @@
                 </button>
 
                 <button
-                    class="page_link_button"
+                    class="page_link_button_exp"
                     onclick="window.location.href='/experience.html'">
                         <span>
                             Experience
@@ -131,7 +55,7 @@
                 </button>
 
                 <button
-                    class="page_link_button"
+                    class="page_link_button_proj"
                     onclick="window.location.href='/projects.html'">
                         <span>
                             Projects
@@ -139,7 +63,7 @@
                 </button>
 
                 <button
-                    class="page_link_button"
+                    class="page_link_button_contact"
                     onclick="window.location.href='/contact.html'">
                         <span>
                             Contact
@@ -147,7 +71,7 @@
                 </button>
 
                 <button
-                    class="page_link_button"
+                    class="page_link_button_download"
                     onclick="window.location.href='/resume_for_website'">
                         <span>
                             Download
