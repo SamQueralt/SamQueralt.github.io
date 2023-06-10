@@ -18,7 +18,7 @@ p {
     display: block;
 }
 
-/* old header style
+/* old header style */
     h1 {
         color: white;
         font-size: 50%;
@@ -28,12 +28,28 @@ p {
 
     h2 {
         color: white;
-        font-size: 30px;
+        font-size: 25px;
         padding: 5%;
         text-align: center;
         font-family: 'IBM Plex Mono', monospace;
     }
-*/
+
+    h2:hover, :active{
+        color: white;
+        font-size: 25px;
+        padding: 5%;
+        text-align: center;
+        font-family: 'IBM Plex Mono', monospace;        
+    }
+
+    h2:visited, :link{
+        color: white;
+        font-size: 25px;
+        padding: 5%;
+        text-align: center;
+        font-family: 'IBM Plex Mono', monospace;
+        text-decoration: none;
+    }
 
 /* button for Sam Queralt */
 .button {
